@@ -1,3 +1,4 @@
+//Square
 console.group("Cuadrado");
 
 const ladoCuadrado = 5;
@@ -18,6 +19,8 @@ function calcularCuadrado(lado) {
 }
 
 console.groupEnd("Cuadrado");
+
+//Triangle
 
 console.group("Triangulo");
 
@@ -55,6 +58,8 @@ console.log({
 });
 
 console.groupEnd("Triangulo");
+
+//Circle
 
 console.group("Circle");
 
