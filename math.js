@@ -1,3 +1,5 @@
+//Square maths
+
 console.group("Cuadrado");
 
 const ladoCuadrado = 5;
@@ -11,6 +13,8 @@ function calcularCuadrado(lado) {
     area: lado * lado,
   };
 }
+
+//Triangle Maths
 
 const ladoTriangulo1 = 6;
 const ladoTriangulo2 = 6;
@@ -30,3 +34,26 @@ function calcularPerimetroTriangulo(lado1, lado2, base, altura) {
 }
 
 console.groupEnd("Cuadrado");
+
+//Circle
+
+console.group("Circle");
+
+const radioCirculo = 3;
+const diametroCirculo = radioCirculo * 2;
+const PI = 3.1415;
+
+const circunferencia = diametroCirculo * PI;
+const areaCirculo = radioCirculo * radioCirculo * PI;
+
+function calcularCirculo(radio) {
+  const diametro = radio * 2;
+  const radioAlCuadrado = Math.pow(radio, 2);
+
+  return {
+    circunferencia: diametro * Math.PI,
+    area: radioAlCuadrado * Math.PI.toFixed(18),
+  };
+}
+
+console.groupEnd("Circle");
