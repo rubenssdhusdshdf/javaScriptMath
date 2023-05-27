@@ -1,0 +1,106 @@
+html{
+    height: 100vh;
+}
+
+:root {
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --green: #40826d;
+  }
+
+  body {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+img{
+    object-fit: contain;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.laptop1, .laptop2, .laptop3, .laptop4{
+    padding-right: 60px;
+}
+
+main{
+    margin: auto;
+    max-width: 1500px;
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.laptop-img > img{
+    object-fit: contain;
+    padding-right: 40px;
+}
+
+h1{
+    font-size: 90px;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.price{
+    font-size: 50px;
+}
+
+.description{
+    font-size: 20px;
+}
+
+#coupon-code{
+    width: 75%;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 30px;
+    
+   
+}
+
+#calculate{
+    width: 100px;
+    height: 35px;
+    border: 0;
+    font-size: 20px;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+    left: -20px;
+    top: -2px;
+    background-color: #40826d;
+    color: white;
+}
+
+#buy{
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(255, 162, 0);
+    border: 0;
+    font-size: 30px;
+    border-radius: 10px;
+    color: black;
+}
+
+/* Hidden elements */
+
+#price{
+    font-size: 40px;
+}
+
+#result{
+    font-size: 40px;
+}
+
+

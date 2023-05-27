@@ -6,18 +6,18 @@ const pResult = document.querySelector("#result");
 btn.addEventListener("click", calcularPrecioConDescuento);
 
 function calcularPrecioConDescuento() {
-  // (P * (100 - D)) / 100
-
   const price = Number(inputPrice.value);
   const discount = Number(inputDiscount.value);
 
+  console.log({ price, discount });
+
   if (!price || !discount) {
-    pResult.innerText = "Please, fill the form";
+    pResult.innerText = "CHANCLA por favor llena el formulario";
     return;
   }
 
   if (discount > 100) {
-    pResult.innerText = "We cannot give you money";
+    pResult.innerText = "Ajá, ya quisieras, no te vamos dar plata, PAGA!";
     return;
   }
 
