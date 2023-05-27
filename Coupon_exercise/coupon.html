@@ -12,40 +12,46 @@
 </head>
 <body>
     <nav>
-        <div class="laptop1">
-            <img src="./Images/laptop1.jpg" alt="laptop1" height="300px" width="300px">
+        <h2>Computers ready to sell</h2>
+        <div class="carrousel-container">
+            <div class="carrousel">
+                <div class="laptop1">
+                    <img src="./Images/laptop1.jpg" alt="laptop1" height="300px" width="168px">
+                </div>
+                <div class="laptop2">
+                    <img src="./Images/laptop2.jpg" alt="laptop2" height="300px" width="168px">
+                </div>
+                <div class="laptop3">
+                    <img src="./Images/laptop3.jpg" alt="laptop3" height="300px" width="168px">
+                </div>
+                <div class="laptop4">
+                    <img src="./Images/laptop4.jpg" alt="laptop4" height="300px" width="168px">
+                </div>
+                <div>
+                    <img src="./Images/laptop5.jpg" alt="laptop5" height="300px" width="168px">
+                </div>
         </div>
-        <div class="laptop2">
-            <img src="./Images/laptop2.jpg" alt="laptop2" height="300px" width="300px">
-        </div>
-        <div class="laptop3">
-            <img src="./Images/laptop3.jpg" alt="laptop3" height="300px" width="300px">
-        </div>
-        <div class="laptop4">
-            <img src="./Images/laptop4.jpg" alt="laptop4" height="300px" width="300px">
-        </div>
-        <div>
-            <img src="./Images/laptop5.jpg" alt="laptop5" height="300px" width="300px">
-        </div>
-             
+        </div>             
     </nav>
+
     <main class="laptop-details">
         <div class="laptop-img">
-            <img src="./Images/laptop2.jpg" alt="laptop1" width="900" height="548">
+            <img src="./Images/laptop2.jpg" alt="laptop1" width="300" height="168">
         </div>
         <div>
             <div class="text-details">
                 <h1 class="laptop-name">Dell Latitude 5430 14"</h1>
-                <p id="price">670<span>euros</span></p>
-                <p class="description">DELL Latitude 5430. Product type: Notebook, Form factor: Clamshell. Processor family: Intel® Core™ i5, Processor model: i5-1245U. Display diagonal: 35.6 cm (14"), HD type: Full HD, Display resolution: 1920 x 1080 pixels. Internal memory: 16 GB, Internal memory type: DDR4-SDRAM. Total storage capacity: 256 GB, Storage media: SSD. On-board graphics card model: Intel Iris Xe Graphics. Operating system installed: Windows 10 Pro. Product colour: Grey. Weight: 1.36 kg</p>
+                <hr>
+                <p id="price">670<span> €</span></p>
+                <p class="description">DELL Latitude 5430. Product type: Notebook, Form factor: Clamshell. Processor family: Intel® Core™ i5, Processor model: i5-1245U. Display diagonal: 35.6 cm (14"), HD type: Full HD, Display resolution: 1920 x 1080 pixels.</p>
             </div>
             <div class="coupon-code-container">
                 <label for="coupon-code"></label>
-                <input id="coupon-code" placeholder="type your coupon code" type="text" />
+                <input id="coupon-code" placeholder="Coupon code" type="text" />
                 <button id="calculate">Apply</button>
+                <p id="result"></p>
             </div>
                 <button id="buy">Buy now</button>
-            <p id="result"></p>
         </div>
         
     </main>

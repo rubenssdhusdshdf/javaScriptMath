@@ -1,88 +1,125 @@
-html{
+html {
     height: 100vh;
-}
-
-:root {
-    --sm: 14px;
-    --md: 16px;
-    --lg: 18px;
+  }
+  
+  :root {
+    --sm: 28.80px;
+    --md: 36px;
+    --lg: 45px;
     --green: #40826d;
   }
-
+  
   body {
     font-family: 'Quicksand', sans-serif;
   }
-
-img{
+  
+  img {
     object-fit: contain;
-}
-
-nav{
+  }
+  
+  /* Carrousel and nav elements */
+  
+  .laptop1,
+  .laptop2,
+  .laptop3,
+  .laptop4,
+  .laptop5 {
+    margin: 1px, solid black;
+    height: 100px;
+    width: 3
+  }
+  
+  .carrousel-container {
+    overflow-x: auto;
     width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+  
+  .carrousel {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.laptop1, .laptop2, .laptop3, .laptop4{
+  }
+  
+  .laptop1,
+  .laptop2,
+  .laptop3,
+  .laptop4 {
     padding-right: 60px;
-}
-
-main{
-    margin: auto;
-    max-width: 1500px;
-    height: 1000px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.laptop-img > img{
-    object-fit: contain;
+    padding-left: 0;
+  }
+  
+  .carousel-nav {
+    display: none; /* Hide the carousel navigation buttons by default for mobile */
+  }
+  
+  nav {
+    min-width: 300px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Styling for larger screens */
+  @media (min-width: 768px) {
+    .carousel-nav {
+      display: block; /* Show the carousel navigation buttons for larger screens */
+    }
+  }
+  
+  /* Main */
+  
+  main {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    min-width: 300px;
+    max-width: 1000px; /* Adjust this value as per your needs */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Add padding on the left and right sides */
+  }
+  
+  .laptop-img > img {
+    object-fit: fill;
     padding-right: 40px;
-}
-
-h1{
-    font-size: 90px;
-    margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.price{
-    font-size: 50px;
-}
-
-.description{
-    font-size: 20px;
-}
-
-#coupon-code{
-    width: 75%;
+  }
+  
+  h1 {
+    font-size: var(--lg);
+    margin-top: 30px;
+  }
+  
+  .price {
+    font-size: 40px;
+  }
+  
+  .description {
+    font-size: var(--sm);
+  }
+  
+  #coupon-code {
+    width: 55%;
     height: 30px;
     border: 1px solid gray;
     border-radius: 10px;
     padding-left: 20px;
-    font-size: 30px;
-    
-   
-}
-
-#calculate{
+    font-size: var(--sm);
+  }
+  
+  #calculate {
     width: 100px;
-    height: 35px;
+    height: 36px;
     border: 0;
     font-size: 20px;
     border-radius: 0 20px 20px 0;
     position: relative;
     left: -20px;
-    top: -2px;
+    top: -3px;
     background-color: #40826d;
     color: white;
-}
-
-#buy{
+  }
+  
+  #buy {
     margin-top: 20px;
     width: 150px;
     height: 50px;
@@ -91,16 +128,19 @@ h1{
     font-size: 30px;
     border-radius: 10px;
     color: black;
-}
-
-/* Hidden elements */
-
-#price{
+  }
+  
+  /* Hidden elements */
+  
+  #price {
     font-size: 40px;
-}
-
-#result{
-    font-size: 40px;
-}
-
-
+  }
+  
+  #result {
+    font-size: var(--md)
+  }
+  
+  h2 {
+    top: 30px;
+  }
+  
