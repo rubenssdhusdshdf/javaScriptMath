@@ -1,19 +1,39 @@
 function isEven(list) {
   return !(list.length % 2);
 }
+function isOdd(list) {
+  return list.length % 2;
+}
 
 function calculateMedian(list) {
-  const sortedList = list.sort((a, b) => a - b);
   const listIsEven = isEven(list);
 
   if (listIsEven) {
-    const indexHalfEvenList = list.length / 2;
-    const evenListMedian =
-      (sortedList[indexHalfEvenList - 1] + sortedList[indexHalfEvenList]) / 2;
-    return evenListMedian;
+    const indexFirstHalfListEven = list.length / 2 - 1;
+    const indexSecondHalfListEven = list.length / 2;
+
+    const listHalfs = [];
+    listHalfs.push(list[indexFirstHalfListEven]);
+    listHalfs.push(list[indexSecondHalfListEven]);
+
+    const medianListEven = calculateAverage(listHalfs);
+    return medianListEven;
   } else {
-    const indexHalfOddList = Math.floor(list.length / 2);
-    const oddListMedian = sortedList[indexHalfOddList];
-    return oddListMedian;
+    const indexHalfListOdd = Math.floor(list.length / 2);
+    const medianListOdd = list[indexHalfListEven];
+    console.log(indexHalfListEven);
+    console.log(medianListEven);
+    return medianListEven;
   }
+}
+
+function calculateAverage(list) {
+  function sumAllElements(accumulatedValue, newValue) {
+    return accumulatedValue + newValue;
+  }
+
+  const sumList = list.reduce(sumAllElements);
+  const average = sumList / list.length;
+  // console.log(promedio);
+  return average;
 }
