@@ -6,6 +6,20 @@ function isOdd(list) {
   return list.length % 2;
 }
 
+function calculateModa(list) {
+  const listCount = {};
+  for (let i = 0; i < list.length; i++) {
+    const element = list[i];
+
+    if (listCount[element]) {
+      listCount[element] += 1;
+    } else {
+      listCount[element] = 1;
+    }
+  }
+  console.log(listCount);
+}
+
 function calculateAverage(list) {
   function sumAllElements(accumulatedValue, newValue) {
     return accumulatedValue + newValue;
