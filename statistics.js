@@ -1,12 +1,24 @@
-function isEven(list) {
+//class Math {
+//static isEven() {}
+//static isOdd() {}
+//static calculateModa() {}
+//static calculateAverage() {}
+//static orderList() {}
+//static orderListBidimensional() {}
+//static calculateMedian() {}
+//}
+
+const Math = {};
+
+Math.isEven = function IsEven(list) {
   return !(list.length % 2);
-}
+};
 
-function isOdd(list) {
+Math.isOdd = function isOdd(list) {
   return list.length % 2;
-}
+};
 
-function calculateModa(list) {
+Math.calculateModa = function calculateModa(list) {
   const listCount = {};
   for (let i = 0; i < list.length; i++) {
     const element = list[i];
@@ -26,9 +38,9 @@ function calculateModa(list) {
   console.log("The most repeated value is: " + orderedListMaxNumber[0]);
   const moda = orderedListMaxNumber[0];
   return moda;
-}
+};
 
-function calculateAverage(list) {
+Math.calculateAverage = function calculateAverage(list) {
   function sumAllElements(accumulatedValue, newValue) {
     return accumulatedValue + newValue;
   }
@@ -36,29 +48,29 @@ function calculateAverage(list) {
   const sumList = list.reduce(sumAllElements);
   const average = sumList / list.length;
   return average;
-}
+};
 
-function orderList(disorderedList) {
+Math.orderList = function orderList(disorderedList) {
   function orderListSort(accumulatedValue, newValue) {
     return accumulatedValue - newValue;
   }
 
   const list = disorderedList.sort(orderListSort);
   return list;
-}
+};
 
-function orderListBidimensional(disorderedList) {
+Math.orderListBidimensional = function orderListBidimensional(disorderedList) {
   function orderListSort(accumulatedValue, newValue) {
     return accumulatedValue - newValue;
   }
 
   const list = disorderedList.sort(orderListSort);
   return list;
-}
+};
 
-function calculateMedian(list) {
-  const orderedList = orderList(list);
-  const listIsEven = isEven(orderedList);
+Math.calculateMedian = function calculateMedian(list) {
+  const orderedList = Math.orderList(list);
+  const listIsEven = Math.isEven(orderedList);
 
   if (listIsEven) {
     const indexFirstHalfListEven = orderedList.length / 2 - 1;
@@ -68,11 +80,11 @@ function calculateMedian(list) {
     listHalfs.push(orderedList[indexFirstHalfListEven]);
     listHalfs.push(orderedList[indexSecondHalfListEven]);
 
-    const medianListEven = calculateAverage(listHalfs);
+    const medianListEven = Math.calculateAverage(listHalfs);
     return medianListEven;
   } else {
     const indexHalfListOdd = Math.floor(orderedList.length / 2);
     const medianListOdd = orderedList[indexHalfListOdd];
     return medianListOdd;
   }
-}
+};
