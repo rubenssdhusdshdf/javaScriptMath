@@ -17,7 +17,15 @@ function calculateModa(list) {
       listCount[element] = 1;
     }
   }
-  console.log(listCount);
+
+  const listArray = Object.entries(listCount);
+  const orderedList = orderListBidimensional(listArray, 1);
+  const orderedListMaxNumber = orderedList[orderedList.length - 1];
+  console.log({ listCount, listArray, orderedList, orderedListMaxNumber });
+
+  console.log("The most repeated value is: " + orderedListMaxNumber[0]);
+  const moda = orderedListMaxNumber[0];
+  return moda;
 }
 
 function calculateAverage(list) {
@@ -31,6 +39,15 @@ function calculateAverage(list) {
 }
 
 function orderList(disorderedList) {
+  function orderListSort(accumulatedValue, newValue) {
+    return accumulatedValue - newValue;
+  }
+
+  const list = disorderedList.sort(orderListSort);
+  return list;
+}
+
+function orderListBidimensional(disorderedList) {
   function orderListSort(accumulatedValue, newValue) {
     return accumulatedValue - newValue;
   }
@@ -59,7 +76,3 @@ function calculateMedian(list) {
     return medianListOdd;
   }
 }
-
-// Example usage:
-const myList = [5, 2, 8, 3, 9];
-console.log(calculateMedian(myList));
