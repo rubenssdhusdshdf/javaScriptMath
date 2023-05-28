@@ -1,15 +1,19 @@
-function CalculateAverage(list) {
-  //sum all the array elements / elements quantity
+function isEven(list) {
+  return !(list.length % 2);
+}
 
-  // let listSum = 0;
-  // for (let i = 0; i < list.length; i++) {
-  //listSum = listSum + list[i];
-  // }
+function calculateMedian(list) {
+  const sortedList = list.sort((a, b) => a - b);
+  const listIsEven = isEven(list);
 
-  const elementsSum(accumulatedValue, newValue) => {};  
-  const listSum = list.reduce(elementSum);
-
-  const average = listSum / list.length;
-  console.log(average);
-  return average;
+  if (listIsEven) {
+    const indexHalfEvenList = list.length / 2;
+    const evenListMedian =
+      (sortedList[indexHalfEvenList - 1] + sortedList[indexHalfEvenList]) / 2;
+    return evenListMedian;
+  } else {
+    const indexHalfOddList = Math.floor(list.length / 2);
+    const oddListMedian = sortedList[indexHalfOddList];
+    return oddListMedian;
+  }
 }
